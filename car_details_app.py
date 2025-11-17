@@ -1,33 +1,32 @@
-class Vehicle:
-    """
-    A super class to store the general type of a vehicle.
-    """
-    def __init__(self, vehicle_type):
-        """
-        Initializes the Vehicle class.
-        
-        Args:
-            vehicle_type (str): The type of vehicle (e.g., car, truck, plane).
-        """
-        self.vehicle_type = vehicle_type
+"""
+Name: Mohamad Suhail Mohamad Solim
+File Name: car_details_app.py
+Description: 
+This program uses object-oriented programming (OOP) to collect and display
+information about a car. It defines a superclass 'Vehicle' and a
+subclass 'Automobile' which inherits from 'Vehicle'. The program
+prompts the user to enter details for a car, stores this data in an
+'Automobile' object, and then prints the collected details in a
+formatted way.
 
-class Automobile(Vehicle):
-    """
-    A class representing an automobile, inheriting from Vehicle.
-    It stores detailed information about a car.
-    """
-    def __init__(self, year, make, model, doors, roof):
-        """
-        Initializes the Automobile class.
-        
-        Args:
-            year (str or int): The manufacturing year.
-            make (str): The manufacturer (e.g., Toyota).
-            model (str): The model name (e.g., Corolla).
-            doors (str or int): The number of doors (e.g., 2 or 4).
-            roof (str): The type of roof (e.g., solid or sun roof).
-        """
-        # Call the super class's (Vehicle's) __init__ method
+Key Variables/Attributes:
+    Vehicle.vehicle_type (str): Stores the general type of the vehicle 
+                                (e.g., "car", "truck").
+    Automobile.year (str/int): The manufacturing year of the automobile.
+    Automobile.make (str): The manufacturer of the automobile.
+    Automobile.model (str): The model of the automobile.
+    Automobile.doors (str/int): The number of doors on the automobile.
+    Automobile.roof (str): The type of roof on the automobile.
+
+Design Notes:
+- This program is designed to be efficient, using simple classes and
+  direct user input/output. It avoids unnecessary data structures
+  or complex operations to minimize memory and processor usage.
+- Error handling is included in the main function to gracefully
+  manage unexpected input or interruptions.
+"""
+
+class Vehicle:
         # We hardcode "car" as per the requirements.
         super().__init__("car")
         
